@@ -1,0 +1,47 @@
+/* html{
+	filter: opacity(0.9999);
+} */
+
+@-moz-document url("about:newtab") {  
+    html{
+        min-height: 100%;
+    }
+    body{
+        background-image: url("file:///C:/everything/img/DizzyDevil.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@-moz-document url("about:home") {  
+    html{
+        min-height: 100%;
+    }
+    body{
+        background-image: url("file:///C:/everything/img/DizzyDevil.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@-moz-document url("about:blank") {  
+    html{
+        min-height: 100%;
+    }
+    body{
+        background-image: url("file:///C:/everything/img/DizzyDevil.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@-moz-document url("chrome://browser/content/blanktab.html") {  
+    html{
+        min-height: 100%;
+    }
+    body{
+        background-image: url("file:///C:/everything/img/DizzyDevil.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

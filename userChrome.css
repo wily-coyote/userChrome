@@ -1,0 +1,184 @@
+:root, menupopup, panel {
+	--arrowpanel-border-radius: 4px!important;
+	--arrowpanel-menuitem-margin-block: 0!important;
+	--arrowpanel-menuitem-margin-inline: 4px!important;
+	--arrowpanel-menuitem-padding-block: 0!important;
+	--arrowpanel-menuitem-padding-inline: 4px!important;
+	--background-color-canvas: ButtonFace!important;
+	--border-radius-medium: 4px!important;
+	--info-bar-background-color: ButtonFace!important;
+	--info-bar-text-color: ButtonText!important;
+	--panel-background: ButtonFace!important;
+	--panel-shadow: none!important;
+	--panel-subview-body-padding-block: 4px!important;
+	--panel-text: ButtonText!important;
+	--tab-min-height: 24px!important;
+	--tab-selected-bgcolor: Canvas!important;
+	--tab-selected-outline-color: ThreeDShadow!important;
+	--tab-selected-shadow: none!important;
+	--toolbar-bgcolor: ButtonFace!important;
+	--toolbar-field-background-color: Window!important;
+	--toolbar-field-border-color: ThreeDShadow!important;
+	--toolbar-start-end-padding: 4px!important;
+	--toolbarbutton-inner-padding: 4px!important;
+	--toolbarbutton-outer-padding: 0!important;
+	--urlbar-container-height: 24px!important;
+	--urlbar-height: 24px!important;
+	--urlbar-min-height: 24px!important;
+	--tab-inline-padding: 4px!important;
+	--urlbarView-small-font-size: 1em!important;
+	--tab-close-button-padding: 4px!important;
+	--urlbar-icon-padding: 2px!important;
+	--identity-box-margin-inline: 0!important;
+	--urlbarView-item-block-padding: 2px!important;
+	--urlbarView-results-padding: 2px!important;
+	--urlbarView-favicon-margin-start: 2px!important;
+	--urlbarView-favicon-margin-end: 2px!important;
+	--button-background-color-hover: SelectedItem!important;
+	--button-background-color-active: SelectedItem!important;
+	--urlbar-box-text-color: SelectedItemText!important;
+	--urlbar-box-hover-text-color: SelectedItemText!important;
+	--toolbarbutton-hover-background: SelectedItem!important;
+	--toolbarbutton-active-background: SelectedItem!important;
+	--arrowpanel-dimmed: SelectedItem!important;
+	--arrowpanel-dimmed-further: SelectedItem!important;
+	--panel-separator-color: ThreeDShadow!important;
+	--text-color-disabled: ThreeDShadow!important;
+	--tab-hover-background-color: SelectedItem!important;
+}
+
+#urlbar, #searchbar{
+	font-size: 1em!important;
+}
+
+menuseparator, menupopup, menupopup > menuitem, menupopup > menu{
+	padding-block: 4px!important;
+	padding-inline: 4px!important;
+}
+
+.searchbar-search-icon{
+	margin-inline: 4px 6px!important;
+}
+
+menu, menuitem, menucaption{
+	max-width: unset!important;
+}
+
+.tab-close-button{
+	width: 20px!important;
+	height: 20px!important;
+	padding: var(--tab-close-button-padding)!important;
+	margin-inline-end: -2px!important;
+}
+
+.urlbarView-row {
+	min-height: 24px!important;
+}
+
+#urlbar .search-one-offs:not([hidden]){
+	padding-block: 4px!important;
+}
+
+#alltabs-button #TabsToolbar {
+	margin: 0 var(--tab-overflow-clip-margin)!important;
+}
+
+#identity-box[pageproxystate="invalid"] > .identity-box-button{
+	padding-inline: var(--urlbar-icon-padding)!important;
+}
+
+.searchbar-engine-one-off-item {
+	min-width: 24px!important;
+	height: 24px!important;
+	margin-inline-end: 4px!important;
+}
+
+
+#urlbar .searchbar-engine-one-off-item{
+	margin-inline: 0 2px!important;
+}
+
+#urlbar .search-panel-one-offs-header-label{
+	padding-inline: var(--urlbarView-item-inline-padding) 2px!important;
+}
+.urlbarView-row[label]::before{
+	font-size: 1em!important;
+}
+
+.searchbar-separator{
+	border-top:unset!important;
+}
+
+.search-setting-button{
+	margin-inline: 4px!important;
+	max-height:24px!important;
+}
+
+#urlbar[open] > #urlbar-background,
+#urlbar[focused] > #urlbar-background, #searchbar:focus-within{
+	box-shadow: none!important;
+}
+
+.menu-right{
+	margin-inline-end:0!important;
+}
+
+.menu-accel, .menu-iconic-accel{
+	margin-inline: .74em 0!important;
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box{
+	padding-inline:2px!important;
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button{
+	background: SelectedItem!important;
+}
+
+#editBookmarkPanel{
+	font: message-box!important;
+}
+
+#editBookmarkPanelTitle,
+h1{
+	font: caption!important;
+}
+
+#main-menubar > menu {
+	&[_moz-menuactive] {
+		background-color: SelectedItem!important;
+		color: SelectedItemText!important;
+	}
+}
+
+menu, menuitem {
+	&:where([_moz-menuactive]:not([disabled="true"])) {
+		background-color: SelectedItem!important;
+		color: SelectedItemText!important;
+	}
+	&:where([_moz-menuactive="true"][disabled="true"]) {
+		background-color: SelectedItem!important;
+	}
+}
+
+toolbarbutton[open],
+.searchbar-engine-one-off-item:hover{
+	color: SelectedItemText!important;
+}
+
+.autocomplete-richlistitem {
+	&:not([disabled="true"]):not([selected]):hover {
+	      color: SelectedItemText!important;
+	}
+}
+
+.tabbrowser-tab,
+toolbarbutton,
+.toolbarbutton-1,
+.tabbrowser-tab,
+.urlbarView-row{
+	&:not([disabled]):hover{
+		color: SelectedItemText!important;
+	}
+}
+
