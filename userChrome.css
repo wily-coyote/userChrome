@@ -46,6 +46,9 @@
 	--text-color-disabled: ThreeDShadow!important;
 	--tab-hover-background-color: SelectedItem!important;
 	--in-content-page-background: ButtonFace!important;
+	--toolbar-color: ButtonText!important;
+	--toolbar-textcolor: ButtonText!important;
+	--toolbar-textcolor-inactive: ButtonText!important;
 }
 
 #urlbar, #searchbar{
