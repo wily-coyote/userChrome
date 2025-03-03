@@ -1,0 +1,8 @@
+html{
+	min-height: 100%;
+}
+body{
+	background-image: url("file:///C:/everything/img/DizzyDevil.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}

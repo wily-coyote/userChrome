@@ -11,6 +11,4 @@ This repo is that theme. It's a version of the default Firefox Quantum theme
 without all the godawful padding everywhere. Also it has native coloring (i.e.
 Windows Classic Theme) using CSS system colors.
 
-There are some other CSS files that I use to customize my browser. If anyone
-knows how to inject custom JavaScript code into the browser UI, please let me
-know.
+This theme also uses userchromeJS to modify the blank and newtab pages.

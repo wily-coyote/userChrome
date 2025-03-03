@@ -1,0 +1,3 @@
+js/rebuild_userChrome.uc.js
+utils/*
+!utils/dizzyDevil
