@@ -45,13 +45,14 @@
 	--panel-separator-color: ThreeDShadow!important;
 	--text-color-disabled: ThreeDShadow!important;
 	--tab-hover-background-color: SelectedItem!important;
+	--in-content-page-background: ButtonFace!important;
 }
 
 #urlbar, #searchbar{
 	font-size: 1em!important;
 }
 
-menuseparator, menupopup, menupopup > menuitem, menupopup > menu{
+menuseparator, menupopup, menupopup > menuitem, menupopup > menu, #userChromejs_openChromeFolder, #userChromejs_restartApp{
 	padding-block: 4px!important;
 	padding-inline: 4px!important;
 }
@@ -180,5 +181,8 @@ toolbarbutton,
 	&:not([disabled]):hover{
 		color: SelectedItemText!important;
 	}
+	:root:not([customizing]) &[disabled]{
+		opacity: unset!important;
+		color: ThreeDShadow!important;
+	}
 }
-

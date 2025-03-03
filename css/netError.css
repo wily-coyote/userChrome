@@ -1,0 +1,15 @@
+@-moz-document url-prefix("about:neterror?"), url-prefix("about:certerror?") {
+	:root {
+		--in-content-page-background: -moz-dialog!important;
+		font-size: unset!important;
+	}
+
+	body{
+		font: message-box;
+	}
+
+	h1, .title, #errorShortDesc{
+		font: caption!important;
+	}
+
+}
