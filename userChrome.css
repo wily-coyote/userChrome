@@ -19,6 +19,7 @@
 	--toolbar-bgcolor: ButtonFace!important;
 	--toolbar-field-background-color: Window!important;
 	--toolbar-field-border-color: ThreeDShadow!important;
+	--arrowpanel-border-color: ThreeDShadow!important;
 	--toolbar-start-end-padding: 4px!important;
 	--toolbarbutton-inner-padding: 4px!important;
 	--toolbarbutton-outer-padding: 0!important;
@@ -40,6 +41,9 @@
 	--urlbar-box-hover-text-color: SelectedItemText!important;
 	--toolbarbutton-hover-background: SelectedItem!important;
 	--toolbarbutton-active-background: SelectedItem!important;
+	--panel-item-hover-bgcolor: SelectedItem!important;
+	--button-hover-bgcolor: SelectedItem!important;
+	--button-active-bgcolor: SelectedItem!important;
 	--arrowpanel-dimmed: SelectedItem!important;
 	--arrowpanel-dimmed-further: SelectedItem!important;
 	--panel-separator-color: ThreeDShadow!important;
@@ -55,6 +59,9 @@
 	--toolbox-non-lwt-textcolor-inactive: ButtonText!important;
 	--toolbar-non-lwt-bgcolor: ButtonFace!important;
 	--toolbar-non-lwt-textcolor: ButtonText!important;
+	--tabs-navbar-separator-style: solid!important;
+	--urlbar-box-focus-bgcolor: SelectedItem!important;
+	--urlbarView-hover-background: SelectedItem!important;
 }
 
 #urlbar, #searchbar{
@@ -137,11 +144,17 @@ menu, menuitem, menucaption{
 	margin-inline: .74em 0!important;
 }
 
-#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box{
+#identity-box[pageproxystate="valid"]:is(.notSecureText,
+.chromeUI,
+.extensionPage) > .identity-box-button,
+#urlbar-label-box{
 	padding-inline:2px!important;
 }
 
-#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button{
+#identity-box[pageproxystate="valid"]:is(.notSecureText,
+.chromeUI,
+.extensionPage) > .identity-box-button,
+.searchbar-engine-one-off-item[selected]{
 	background: SelectedItem!important;
 }
 
@@ -172,20 +185,20 @@ menu, menuitem {
 }
 
 toolbarbutton[open],
-.searchbar-engine-one-off-item:hover{
-	color: SelectedItemText!important;
+.searchbar-engine-one-off-item:hover,
+.searchbar-engine-one-off-item[selected]{
+		color: SelectedItemText!important;
 }
 
 .autocomplete-richlistitem {
 	&:not([disabled="true"]):not([selected]):hover {
-	      color: SelectedItemText!important;
+		color: SelectedItemText!important;
 	}
 }
 
 .tabbrowser-tab,
-toolbarbutton,
 .toolbarbutton-1,
-.tabbrowser-tab,
+toolbarbutton,
 .urlbarView-row{
 	&:not([disabled]):hover{
 		color: SelectedItemText!important;
@@ -194,4 +207,49 @@ toolbarbutton,
 		opacity: unset!important;
 		color: ThreeDShadow!important;
 	}
+}
+
+
+.tabbrowser-tab[selected]:hover{
+	color: ButtonText!important;
+}
+
+/* needed for older FF versions */
+.tab-background {
+	&:is([selected], [multiselected]) {
+		background-color: var(--tab-selected-bgcolor)!important;
+		box-shadow: var(--tab-selected-shadow)!important;
+		outline-color: var(--tab-selected-outline-color)!important;
+	}
+}
+
+#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected], [multiselected]){
+	background-color: SelectedItem!important;
+}
+
+#urlbar:is([focused], [open]) > #urlbar-background, #searchbar:focus-within{
+	background-color: Window!important;
+}
+
+#navigator-toolbox{
+	border-bottom-color: ThreeDShadow!important;
+}
+
+.toolbarbutton-animatable-box, .toolbarbutton-1{
+	fill: currentColor!important;
+}
+
+.urlbarView-row {
+	&[selected] {
+		color: SelectedItemText!important;
+		background-color: SelectedItem!important;
+	}
+}
+
+.urlBarView, .urlbarView-body-inner, #urlbar, .search-one-offs {
+	border-color: ThreeDShadow!important;
+}
+
+#urlbar:is([focused], [open]), #searchbar:focus-within, .urlbarView:not([noresults]) > .search-one-offs:not([hidden]){
+	color: ButtonText!important;
 }
