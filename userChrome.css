@@ -260,3 +260,8 @@ toolbarbutton,
 #urlbar:is([focused], [open]), #searchbar:focus-within, .urlbarView:not([noresults]) > .search-one-offs:not([hidden]){
 	color: ButtonText!important;
 }
+
+body {
+	/* Thanks LibreWolf for having zero option to choose the CJK font priority on chrome. */
+	font-family: system-ui, "Yu Gothic";
+}
