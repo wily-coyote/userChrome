@@ -265,3 +265,13 @@ body {
 	/* Thanks LibreWolf for having zero option to choose the CJK font priority on chrome. */
 	font-family: system-ui, "Noto Sans CJK JP", "Yu Gothic";
 }
+
+.letterboxing {
+	--letterboxing-bgcolor: black!important;
+	.browserContainer {
+		background: url("chrome://global/skin/media/imagedoc-darknoise.png") fixed!important;
+		browser {
+			box-shadow: 0px 0px 50px black;
+		}
+	}
+}

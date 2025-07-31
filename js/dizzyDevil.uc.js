@@ -59,6 +59,9 @@ function registerPage(at, uri){
 
 registerPage("newtab", "chrome://userchromejs/content/dizzyDevil/dizzyDevil.xhtml");
 registerPage("dizzy", "chrome://userchromejs/content/dizzyDevil/dizzyDevil.xhtml");
-registerPage("blank", "chrome://userchromejs/content/dizzyDevil/dizzyDevil.xhtml");
+
+//breaks _blank referrers... don't know why
+//registerPage("blank", "chrome://userchromejs/content/dizzyDevil/dizzyDevil.xhtml");
+
 registerPage("home", "chrome://userchromejs/content/dizzyDevil/dizzyDevil.xhtml");
 registerPage("systemcolors", "chrome://userchromejs/content/systemColors/systemColors.xhtml");
