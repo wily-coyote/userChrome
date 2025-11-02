@@ -7,17 +7,17 @@
 	--arrowpanel-menuitem-margin-inline: 4px!important;
 	--arrowpanel-menuitem-padding-block: 0!important;
 	--arrowpanel-menuitem-padding-inline: 4px!important;
-	--background-color-canvas: ButtonFace!important;
+	--background-color-canvas: ThreeDFace!important;
 	--border-radius-medium: 4px!important;
 	--button-active-bgcolor: SelectedItem!important;
 	--button-background-color-active: SelectedItem!important;
 	--button-background-color-hover: SelectedItem!important;
 	--button-hover-bgcolor: SelectedItem!important;
 	--identity-box-margin-inline: 0!important;
-	--in-content-page-background: ButtonFace!important;
-	--info-bar-background-color: ButtonFace!important;
+	--in-content-page-background: ThreeDFace!important;
+	--info-bar-background-color: ThreeDFace!important;
 	--info-bar-text-color: ButtonText!important;
-	--panel-background: ButtonFace!important;
+	--panel-background: ThreeDFace!important;
 	--panel-item-hover-bgcolor: SelectedItem!important;
 	--panel-separator-color: ThreeDShadow!important;
 	--panel-shadow: none!important;
@@ -32,11 +32,11 @@
 	--tab-selected-shadow: none!important;
 	--tabs-navbar-separator-style: solid!important;
 	--text-color-disabled: ThreeDShadow!important;
-	--toolbar-bgcolor: ButtonFace!important;
+	--toolbar-bgcolor: ThreeDFace!important;
 	--toolbar-color: ButtonText!important;
 	--toolbar-field-background-color: Window!important;
 	--toolbar-field-border-color: ThreeDShadow!important;
-	--toolbar-non-lwt-bgcolor: ButtonFace!important;
+	--toolbar-non-lwt-bgcolor: ThreeDFace!important;
 	--toolbar-non-lwt-textcolor: ButtonText!important;
 	--toolbar-start-end-padding: 4px!important;
 	--toolbar-textcolor-inactive: ButtonText!important;
@@ -45,8 +45,8 @@
 	--toolbarbutton-hover-background: SelectedItem!important;
 	--toolbarbutton-inner-padding: 4px!important;
 	--toolbarbutton-outer-padding: 0!important;
-	--toolbox-non-lwt-bgcolor-inactive: ButtonFace!important;
-	--toolbox-non-lwt-bgcolor: ButtonFace!important;
+	--toolbox-non-lwt-bgcolor-inactive: ThreeDFace!important;
+	--toolbox-non-lwt-bgcolor: ThreeDFace!important;
 	--toolbox-non-lwt-textcolor-inactive: ButtonText!important;
 	--toolbox-non-lwt-textcolor: ButtonText!important;
 	--urlbar-box-focus-bgcolor: SelectedItem!important;
@@ -262,7 +262,7 @@ toolbarbutton,
 }
 
 body {
-	/* Thanks LibreWolf for having zero option to choose the CJK font priority on chrome. */
+	/* Thanks Firefox/LibreWolf for having zero option to choose the CJK font priority on chrome. */
 	font-family: system-ui, "Noto Sans CJK JP", "Yu Gothic";
 }
 
@@ -274,4 +274,12 @@ body {
 			box-shadow: 0px 0px 50px black;
 		}
 	}
+}
+
+findbar{
+	z-index: 999999;
+}
+
+.searchmode-switcher {
+	color: HighlightText;
 }
